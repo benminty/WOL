@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wake on Lan</title>
+
+    <link rel="stylesheet" href='/public/css/main.css'>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Wake on Lan</h2>
+        <form action="api/wake" method="POST" id="lan">
+            <div class="info-box">
+                <input type="text" name="machine" id="machine" required="" autocomplete="on">
+                <label>Machine Name</label>
+            </div>
+            <div class="info-box">
+                <input type="" name="mac" id="mac" required autocomplete="on">
+                <label>Mac Address</label>
+            </div>
+
+            <div class="info-box">
+                <input type="" name="ip" id="ip" required autocomplete="on">
+                <label>IP Address</label>
+            </div>
+
+            <div class="info-box">
+                <input type="number" name="port" id="port" required autocomplete="on">
+                <label>Port</label>
+            </div>
+            <button class="add" type="submit" onclick="onAdd()">Add</button>
+            <a href="/shutdown">Machine List</a>
+        </form>
+    </div>
+</body>
+
+</html>
